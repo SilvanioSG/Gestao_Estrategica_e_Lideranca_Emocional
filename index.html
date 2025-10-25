@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo de Caso SIMULADO: Gestão de Conflitos - Silvanio Gois</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --azul-principal: #27628d;
+            --azul-secundario: #4a9ecf;
+            --cinza-claro: #f4f4f4;
+            --cinza-medio: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--cinza-claro);
+        }
+
+        header {
+            background-color: var(--azul-principal);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            object-fit: cover;
+        }
+
+        .header-info h1 {
+            margin: 0;
+            font-size: 1.7em;
+            font-weight: 700;
+        }
+
+        .header-info p {
+            margin: 3px 0;
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        .header-info a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .header-info a:hover {
+            color: #c0d9ed;
+            text-decoration: underline;
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: var(--azul-principal);
+            font-size: 1.9em;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #3b8bbd;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            color: var(--azul-secundario);
+            font-size: 1.1em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        /* Blocos visuais */
+        .executive-summary {
+            background-color: #f1f7fb;
+            border-left: 4px solid var(--azul-principal);
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+
+        .relato-section, .insights {
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            border-radius: 6px;
+            margin: 25px 0;
+            border-left: 4px solid var(--azul-secundario);
+        }
+
+        .insights h4 {
+            color: var(--azul-principal);
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        ul, ol {
+            margin-bottom: 1em;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        hr {
+            border: 0;
+            border-top: 2px dashed var(--cinza-medio);
+            margin: 40px 0;
+        }
+
+        footer {
+            background-color: var(--azul-principal);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 0.85em;
+        }
+
+        footer a {
+            color: #c0d9ed;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-info p {
+                font-size: 0.85em;
+            }
+
+            .relato-section, .insights {
+                padding: 12px 15px;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .profile-section {
+                flex-direction: row;
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            .header-info {
+                padding-left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-section">
+                <img src="Executivo.JPG" alt="Foto de Silvanio Gois" class="profile-pic">
+                <div class="header-info">
+                    <h1>Silvanio Gois</h1>
+                    <p>Técnico em Administração e Edificações | Graduando em Processos Gerenciais</p>
+                    <p><a href="mailto:sg@silvaniogois.com.br">sg@silvaniogois.com.br</a> | <a href="https://www.silvaniogois.com.br" target="_blank">www.silvaniogois.com.br</a></p>
+                    <p><em>Estudos e Aplicações em Gestão Estratégica & Liderança Emocional</em></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h2>Estudo de Caso Simulado: Gestão de Conflitos e Controle Emocional</h2>
+
+            <section class="executive-summary">
+                <p><strong>Resumo Executivo:</strong> Este estudo simulado demonstra minha abordagem técnica e emocional na gestão de conflitos corporativos. Baseado em práticas aplicadas em ambientes de alta complexidade, descreve uma metodologia replicável que transforma tensões em oportunidades de alinhamento e desempenho sustentável.</p>
+            </section>
+
+            <h3>Introdução Técnica</h3>
+            <p>Apresento uma análise metodológica em primeira pessoa, simulando um cenário corporativo realista. Minha atuação, consolidada em projetos e equipes de alta complexidade (como seguros e fintechs), requer uma abordagem técnica e humana na <strong>Resolução de Conflitos Corporativos (RCC)</strong> e no <strong>Controle Emocional (CE)</strong>. Trato essas competências como ferramentas de gestão de risco e produtividade, essenciais para conectar os níveis <strong>Operacional, Tático e Estratégico</strong> da organização.</p>
+
+            <section class="insights">
+                <h4>Insights-Chave</h4>
+                <ul>
+                    <li>Metodologia replicável baseada em dados e autogestão emocional.</li>
+                    <li>Experiência em ambientes complexos, regulatórios e dinâmicos.</li>
+                    <li>Transformação de conflitos em ferramentas de inovação e aprendizado.</li>
+                    <li>Resultados tangíveis: eficiência, alinhamento e retenção de talentos.</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <h3>I. Perspectiva Operacional: Intervenção Direta e Técnica</h3>
+            <p>No nível operacional, os conflitos são normalmente <strong>interpessoais</strong> ou ligados a <strong>processos e recursos</strong>. Minha atuação foca na mediação técnica e no restabelecimento rápido da produtividade.</p>
+
+            <div class="relato-section">
+                <h4>Relato Técnico (Primeira Pessoa)</h4>
+                <ol>
+                    <li><strong>Diagnóstico Rápido:</strong> Em situações de atrito entre áreas (ex.: Underwriting vs. Sinistros), aplico <strong>Escuta Ativa Reflexiva</strong> e <strong>Autocontrole Emocional</strong> para separar fatos de percepções.</li>
+                    <li><strong>Comunicação Estratégica:</strong> Uso a <strong>Comunicação Não-Violenta (CNV)</strong> adaptada para identificar necessidades e alinhar expectativas.</li>
+                    <li><strong>Prevenção:</strong> O conflito serve como insumo para melhoria contínua, revisando <strong>procedimentos operacionais</strong> e integrando o ciclo PDCA.</li>
+                </ol>
+            </div>
+            <p><strong>Impacto:</strong> Redução de atritos e melhoria na sinergia entre áreas, elevando a eficiência e diminuindo prazos críticos.</p>
+
+            <hr>
+
+            <h3>II. Perspectiva Tática: Alinhamento Interdepartamental</h3>
+            <p>No nível tático, os conflitos surgem em torno de <strong>metas, métodos e recursos</strong>. A chave é manter o foco coletivo e fortalecer a comunicação intergerencial.</p>
+
+            <div class="relato-section">
+                <h4>Relato Descritivo (Primeira Pessoa)</h4>
+                <ol>
+                    <li><strong>Mapeamento Emocional:</strong> Observo o clima de reuniões táticas e identifico focos de tensão que comprometem decisões.</li>
+                    <li><strong>Mediação Estruturada:</strong> Facilito workshops com base no modelo <em>Interesses–Opções–Critérios–Compromissos</em> (Harvard), estimulando o <em>win-win</em>.</li>
+                    <li><strong>Postura de Âncora:</strong> Mantenho equilíbrio emocional como exemplo, reduzindo resistências e reorientando o grupo ao objetivo comum.</li>
+                </ol>
+            </div>
+            <p><strong>Impacto:</strong> Conflitos transformados em decisões orientadas por dados (ROI, viabilidade), reduzindo desgaste e fortalecendo a cooperação entre áreas.</p>
+
+            <hr>
+
+            <h3>III. Perspectiva Estratégica: Visão Sistêmica e Resiliência do Líder</h3>
+            <p>No nível estratégico, os conflitos são <strong>culturais e visionais</strong>. Minha função é garantir que divergências sejam canalizadas para o aprimoramento da visão organizacional.</p>
+
+            <div class="relato-section">
+                <h4>Relato Técnico (Primeira Pessoa)</h4>
+                <ol>
+                    <li><strong>Conflito como Oportunidade:</strong> Trato divergências como indicadores de diversidade de pensamento, criando espaços de diálogo estruturado.</li>
+                    <li><strong>Resiliência e Clareza:</strong> Em crises, comunico com objetividade e calma, assegurando o foco da liderança na mitigação de riscos.</li>
+                    <li><strong>Fechamento Cultural:</strong> Após decisões críticas, conduzo o alinhamento emocional e reforço o compromisso coletivo com a nova estratégia.</li>
+                </ol>
+            </div>
+            <p><strong>Impacto:</strong> Retenção de talentos e integração eficiente em processos de fusões, mudanças estruturais ou crises regulatórias.</p>
+
+            <hr>
+
+            <h3>Conclusão e Aplicações Estratégicas</h3>
+            <p>Minha prática mostra que RCC e CE são ferramentas de gestão de desempenho aplicáveis a qualquer contexto corporativo:</p>
+            <ul>
+                <li><strong>Operacional:</strong> Eficiência e melhoria contínua.</li>
+                <li><strong>Tático:</strong> Alinhamento e otimização de recursos.</li>
+                <li><strong>Estratégico:</strong> Coesão cultural e clareza sob pressão.</li>
+            </ul>
+
+            <h4>Proposição de Valor</h4>
+            <p>Ofereço uma abordagem estruturada, humana e replicável para a gestão de conflitos. Transformo atritos em oportunidades de crescimento, inovação e engajamento organizacional.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Silvanio Gois — Todos os direitos reservados | 
+        <a href="https://www.linkedin.com/in/silvaniogois" target="_blank">LinkedIn</a> | 
+        <a href="https://www.silvaniogois.com.br" target="_blank">Site Oficial</a></p>
+    </footer>
+</body>
+</html>
